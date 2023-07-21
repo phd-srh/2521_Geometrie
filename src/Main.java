@@ -3,12 +3,15 @@ public class Main {
         Kreis kreis = new Kreis(2.5);
         Quadrat quadrat = new Quadrat(3);
         Rechteck rechteck = new Rechteck(1.9, 2.1);
+//        Grundform etwas = new Grundform("Unbekannt"); // kann ich das hier verbieten? JA
 
         ausgabeBerechnungen(kreis);
         ausgabeBerechnungen(quadrat);
         ausgabeBerechnungen(rechteck);
+//        ausgabeBerechnungen(etwas);
     }
 
+    // Polymorphie 
     private static void ausgabeBerechnungen(Grundform form) {
         //String formTyp = "Kreis"; // können wir das irgendwie rausfinden?
         String formTyp = form.getFormTyp(); // die umständliche aber funktionierende Version

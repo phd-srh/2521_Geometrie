@@ -1,4 +1,4 @@
-public class Grundform {
+public abstract class Grundform {
     private String formTyp;
 
     public Grundform(String formTyp) {
@@ -9,11 +9,6 @@ public class Grundform {
         return formTyp;
     }
 
-    public double berechneFläche() {
-        // was sollen wir hier machen?
-        return 0.0;
-    }
-    public double berechneUmfang() {
-        return 0.0;
-    }
+    public abstract double berechneFläche();
+    public abstract double berechneUmfang();
 }

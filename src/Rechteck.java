@@ -3,6 +3,7 @@ public class Rechteck extends Grundform {
     private double breite;
 
     public Rechteck(double länge, double breite) {
+        super("Rechteck");
         this.länge = länge;
         this.breite = breite;
     }

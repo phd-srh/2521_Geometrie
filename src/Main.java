@@ -5,12 +5,15 @@ public class Main {
         Rechteck rechteck = new Rechteck(1.9, 2.1);
 
         ausgabeBerechnungen(kreis);
-//        ausgabeBerechnungen(quadrat);
-//        ausgabeBerechnungen(rechteck);
+        ausgabeBerechnungen(quadrat);
+        ausgabeBerechnungen(rechteck);
     }
 
-    private static void ausgabeBerechnungen(Kreis kreis) {
-        System.out.println("Fläche vom Kreis: " + kreis.berechneFläche());
-        System.out.println("Umfang vom Kreis: " + kreis.berechneUmfang());
+    private static void ausgabeBerechnungen(Grundform form) {
+        //String formTyp = "Kreis"; // können wir das irgendwie rausfinden?
+        String formTyp = form.getFormTyp(); // die umständliche aber funktionierende Version
+//        String formTyp = form.getClass().getName(); // elegant, aber noch unbekannt
+        System.out.println("Fläche vom " + formTyp + ": " + form.berechneFläche());
+        System.out.println("Umfang vom " + formTyp + ": " + form.berechneUmfang());
     }
 }
